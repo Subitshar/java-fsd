@@ -1,5 +1,5 @@
 
-public class EmpDetails {
+public class EmpDetails_npo {
 	int id;
 	String Name;
 	
