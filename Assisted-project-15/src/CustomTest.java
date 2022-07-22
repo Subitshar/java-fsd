@@ -11,6 +11,9 @@ public class CustomTest {
 		} catch (Custom ex) {
 			System.out.println("Exception Occurred. " + ex.getMessage());
 		}
+		finally{
+			System.out.println("Complete transaction");
+		}
 	}
 	
 	void withdrawFromATM(int withDrawAmount, int accountNumber) {
