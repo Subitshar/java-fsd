@@ -4,12 +4,14 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+	
+	static List<String> Myfolder = new LinkedList<>();
 
 	public static void main(String[] args) {
-		System.out.println("\n********************************************************\n");
-		System.out.println("\tWelcome to Virtual Repository");
-		System.out.println("\t               -Developed by SUBITSHA R \n");
-		System.out.println("*********************************************************");
+		System.out.println("\n********************************************************************\n");
+		System.out.println("\t     Welcome to Virtual Repository");
+		System.out.println("\t                  -Developed by SUBITSHA R \n");
+		System.out.println("********************************************************************* ");
 		optionsSelection();
 	}
 
@@ -22,10 +24,6 @@ public class Main {
 		for (int i = 0; i < len; i++) {
 			System.out.println(arr[i]);
 		}
-
-		List<String> Myfolder = new LinkedList<>();
-		Myfolder.add(toLower("SUBi.txt"));
-		Myfolder.add(toLower("SuBa.dox"));
 		System.out.println("\nEnter the Choice \t");
 		int choice;
 		Scanner sc = new Scanner(System.in);
@@ -40,7 +38,7 @@ public class Main {
 					optionsSelection();
 					break;
 				case 2:
-					Subquary(Myfolder);
+					Subquery(Myfolder);
 					break;
 				case 3:
 					closeapp();
@@ -69,7 +67,7 @@ public class Main {
 		System.out.println(myfolder);
 	}
 
-	private static void Subquary(List<String> myfolder) {
+	private static void Subquery(List<String> myfolder) {
 		String subarr[] = { "\n1. Add a file to the existing directory list",
 				"2. Delete a user specified file from the existing directory list",
 				"3. Search a user specified file from the main directory",
@@ -92,10 +90,15 @@ public class Main {
 					for (int k = 0; k < n; k++) {
 						System.out.println("Enter the file name to add the directory");
 						file = sc.next();
-						myfolder.add(toLower(file));
+						if(!(myfolder.contains(toLower(file)))) {
+							myfolder.add(toLower(file));
+							System.out.println("The file add successfully");}
+						else {
+							System.out.println("The file already exists.");
+						}
 					}
 					System.out.println("\nAfter enter the file the folder contain :\n" + myfolder);
-					Subquary(myfolder);
+					Subquery(myfolder);
 					break;
 				case 2:
 					System.out.println("\nEnter the file name want to delete:");
@@ -107,7 +110,7 @@ public class Main {
 					} else {
 						System.out.println("\nThe file not found");
 					}
-					Subquary(myfolder);
+					Subquery(myfolder);
 					break;
 				case 3:
 					System.out.println("\nEnter the file to want to search:");
@@ -118,7 +121,7 @@ public class Main {
 					} else {
 						System.out.println("\nThe file not founded.");
 					}
-					Subquary(myfolder);
+					Subquery(myfolder);
 					break;
 				case 4:
 					optionsSelection();
