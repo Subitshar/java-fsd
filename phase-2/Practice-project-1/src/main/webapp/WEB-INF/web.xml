@@ -21,8 +21,8 @@
   </servlet-mapping>  
   <servlet>  
     <description></description>  
-    <servlet-name>ProfileServlet</servlet-name>  
-    <servlet-class>userlogin.ProfileServlet</servlet-class>  
+    <servlet-name>DashboardServlet</servlet-name>  
+    <servlet-class>userlogin.DashboardServlet</servlet-class>  
   </servlet>  
   <servlet-mapping>  
     <servlet-name>DashboardServlet</servlet-name>  
