@@ -25,8 +25,8 @@
     <servlet-class>userlogin.ProfileServlet</servlet-class>  
   </servlet>  
   <servlet-mapping>  
-    <servlet-name>ProfileServlet</servlet-name>  
-    <url-pattern>/ProfileServlet</url-pattern>  
+    <servlet-name>DashboardServlet</servlet-name>  
+    <url-pattern>/DashboardServlet</url-pattern>  
   </servlet-mapping>  
   <servlet>  
     <description></description>  
