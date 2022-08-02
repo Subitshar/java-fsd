@@ -1,4 +1,4 @@
-
+package assistedproject1;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class GetServlet
+ * Servlet implementation class PostServlet
  */
-@WebServlet("/GetServlet")
-public class GetHandler extends HttpServlet {
+@WebServlet("/PostServlet")
+public class PostHandler extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public GetHandler() {
+    public PostHandler() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,14 +28,14 @@ public class GetHandler extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
+		
+		PrintWriter out = response.getWriter();
         out.println("<html><body>");
         
         String Firstname = request.getParameter("Firstname");
         String Lastname = request.getParameter("Lastname");
         out.println("Firstname=" + Firstname + "<br>Lastname=" + Lastname);
-        out.println("</body></html>");
-
+        out.println("</body></html>"); 
 	}
 
 	/**

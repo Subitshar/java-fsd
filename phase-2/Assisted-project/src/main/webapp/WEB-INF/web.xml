@@ -12,7 +12,7 @@
   
   <servlet>
     <servlet-name>GetHandler</servlet-name>
-    <servlet-class>GetHandler</servlet-class>
+    <servlet-class>assistedproject1.GetHandler</servlet-class>
   </servlet>
   
    <servlet-mapping>
@@ -22,12 +22,22 @@
   
   <servlet>
     <servlet-name>PostHandler</servlet-name>
-    <servlet-class>PostHandler</servlet-class>
+    <servlet-class>assistedproject1.PostHandler</servlet-class>
   </servlet>
   
   <servlet-mapping>
     <servlet-name>PostHandler</servlet-name>
     <url-pattern>/PostHandler</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>GenServlet</servlet-name>
+    <servlet-class>assistedproject3.GenServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>GenServlet</servlet-name>
+    <url-pattern>/GenServlet</url-pattern>
   </servlet-mapping>
   
   
