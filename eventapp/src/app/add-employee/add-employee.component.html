@@ -1,0 +1,68 @@
+<div class="container m-2 justify-center" style="width: 400px">
+  <form #f="ngForm">
+    <div class="row m-3">
+      <div class="form-group">
+        <label for="id">id</label>
+        <input
+          type="number"
+          id="id"
+          class="form-control"
+          name="id"
+          ngModel
+          required
+        />
+      </div>
+    </div>
+    <div class="row m-3">
+      <div class="form-group">
+        <label for="first_name">First Name</label>
+        <input
+          type="text"
+          id="content"
+          class="form-control"
+          name="first_name"
+          ngModel
+          required
+        />
+      </div>
+    </div>
+    <div class="row m-3">
+      <div class="form-group">
+        <label for="last_name">Last Name</label>
+        <input
+          type="text"
+          id="last_name"
+          class="form-control"
+          name="last_name"
+          ngModel
+          required
+        />
+      </div>
+    </div>
+    <div class="row m-3">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="text"
+          id="email"
+          class="form-control"
+          name="email"
+          ngModel
+          required
+        />
+      </div>
+    </div>
+
+    <div class="row m-3">
+      <div class="col">
+        <button
+          class="btn btn-primary btn-sm"
+          [disabled]="!f.valid"
+          (click)="onCreatePost(f.value, f)"
+        >
+          Add Employee
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

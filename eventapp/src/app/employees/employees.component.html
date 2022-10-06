@@ -1,0 +1,112 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="container m-3">
+        <button
+          role="presentation"
+          type="button"
+          class="btn btn-info border"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a class="nav-link" routerLink="addemployee">Add Employee</a>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<h2>Employee Details:</h2>
+<div class="row m-3">
+  <div class="col">
+    <p *ngIf="fetchedEmployees.length < 1">No Posts Available !!</p>
+    <table
+      class="table table-secondary table-striped"
+      *ngIf="fetchedEmployees.length >= 1"
+    >
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let employee of fetchedEmployees">
+        <tr>
+          <td>
+            {{ employee.id }}
+          </td>
+          <td>
+            {{ employee.first_name }}
+          </td>
+          <td>
+            {{ employee.last_name }}
+          </td>
+          <td>
+            {{ employee.email }}
+          </td>
+          <th>
+            <button
+              class="btn btn-sm btn-danger"
+              (click)="onDelete(employee.id)"
+            >
+              Delete
+            </button>
+          </th>
+          <th>
+            <button
+              class="btn btn-sm btn-info"
+              (click)="onDetails(employee.id)"
+            >
+              view Details
+            </button>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div>
+  <table
+    class="table table-secondary table-striped"
+    *ngIf="empDetails.length >= 1"
+  >
+    <h2>Employee Details</h2>
+    <tbody *ngFor="let emp of empDetails">
+      <tr>
+        <td>
+          <label><b>ID</b></label>
+        </td>
+        <td>
+          <span>{{ emp.id }}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label><b>First Name</b></label>
+        </td>
+        <td>
+          <span>{{ emp.first_name }}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label><b>Last Name</b></label>
+        </td>
+        <td>
+          <span>{{ emp.last_name }}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label><b>Email</b></label>
+        </td>
+        <td>
+          <span>{{ emp.email }}</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

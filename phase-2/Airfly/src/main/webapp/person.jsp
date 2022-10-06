@@ -20,10 +20,14 @@
 	<br />
 	<b>Ph.Number</b> : ${param.phonenumber}
 	<br />
-	<b>Date</b> : ${param.date}
+	<b>Date</b> : ${param.dateoftravel}
+	<br />
+	<b>Source</b> : ${param.source}
+	<br />
+	<b>Destination</b> : ${param.destination}
 	<br />
 	<br /> Click
-	<a href="BookingPage.jsp">Confirm</a> if your details are correct.
+	<a href="BooKingPage.jsp">Confirm</a> if your details are correct.
 
 </body>
 </html>

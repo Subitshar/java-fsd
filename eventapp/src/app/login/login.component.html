@@ -1,0 +1,38 @@
+<div class="container m-2 border justify-center" style="width: 400px">
+  <form style="justify-content: center">
+    <h1><i>Admin Login:</i></h1>
+    <br />
+    <div class="row">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          ngModel
+          class="form-control"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          class="form-control"
+          name="password"
+          ngModel
+        />
+      </div>
+    </div>
+
+    <button
+      class="btn btn-primary m-2"
+      type="submit"
+      (click)="simpleAlertBox()"
+    >
+      Login
+    </button>
+  </form>
+</div>
